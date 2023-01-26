@@ -2,7 +2,7 @@ import useSWR from "swr";
 import ArticleHooks from "./use-case/article";
 import baseUrl from "./use-case/base-url";
 import { Box } from "@mui/system";
-import Logo from "./component/utils/logo";
+import MLogo, { ALogo, NLogo, RLogo, ULogo } from "./component/utils/logo";
 
 function MyComponent() {
   const { fetch } = ArticleHooks();
@@ -28,7 +28,11 @@ function MyComponent() {
       {data && (
         <>
           <Box sx={{ display: "flex", justifyContent: "center"}}>
-            <Logo />
+            <MLogo />
+            <ALogo />
+            <RLogo />
+            <ULogo />
+            <NLogo />
           </Box>
         </>
       )}
